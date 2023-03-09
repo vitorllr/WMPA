@@ -15,10 +15,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_193152) do
   enable_extension "plpgsql"
 
   create_table "kennels", force: :cascade do |t|
-    t.text "name"
-    t.text "address"
+    t.string "name"
+    t.string "address"
     t.integer "phone_number"
-    t.text "email"
+    t.string "email"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,13 +26,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_193152) do
   end
 
   create_table "pets", force: :cascade do |t|
-    t.text "name"
+    t.string "name"
     t.integer "age"
-    t.text "breed"
+    t.string "breed"
     t.bigint "kennel_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["kennel_id"], name: "index_pets_on_kennel_id"
+    t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,13 +45,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_193152) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "name"
+    t.string "name"
     t.integer "phone_number"
-    t.text "role"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "kennels", "users"
   add_foreign_key "pets", "kennels"
+  add_foreign_key "pets", "users"
 end
