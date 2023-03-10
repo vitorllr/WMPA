@@ -1,0 +1,38 @@
+  <div class="container">
+      <div>  <h1><strong>All Kennels Available </strong></h1>
+      </div>
+      <div class="card_kennel border">
+        <div class="hedears_kennel border">
+          <div class="row">
+            <div class="col-4">
+              <p>kennel</p>
+            </div>
+            <div class="col-4">
+              <p>Address</p>
+            </div>
+            <div class="col-4">
+              <p>Phone number</p>
+            </div>
+          </div>
+        </div>
+        <div class="content_kennel">
+          <div id="kennel">
+            <div class="row border-bottom">
+              <% @kennels.each do |kennel| %>
+                <div class="col-4 border-bottom p-2">
+                  <h1><%= kennel.name %></h1>
+                        <%= link_to "Show this kennel", kennel %>
+
+                </div>
+                <div class="col-4 border-bottom p-2">
+                  <p><%= kennel.address %></p>
+                </div>
+                <div class="col-4 border-bottom p-2">
+                 <p><%= kennel.phone_number %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
