@@ -1,4 +1,23 @@
 // Specific CSS for your home-page
+#user_email{
+  border-radius: 125px;
+}
+#user_password{
+  border-radius: 125px;
+}
+#user_phone_number{
+  border-radius: 125px
+}
+#user_name{
+  border-radius: 125px;
+}
+#user_password_confirmation{
+  border-radius: 125px;
+}
+
+.form-inputs{
+  padding: 40px;
+}
 
 .banner {
   background-size: cover;
