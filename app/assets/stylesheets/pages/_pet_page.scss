@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,600&display=swap');
+
+body {
+  overflow-x: hidden;
+}
+
+.lg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+
+}
+
+.title {
+width: 333px;
+height: 76px;
+font-family: 'Koh Santepheap';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 76px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.carousel {
+  min-width: 900px;
+}
+
+@media (max-width: 900px) {
+  .carousel {
+    min-width: 500px;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel {
+    min-width: 350px;
+    max-width: 420px;
+  }
+}
+
+.carousel-item img {
+  border-radius: 19px;
+}
+
+.lg-container .dog-infos {
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #000000;
+  flex-wrap: wrap;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.lg-box {
+  border: 3px solid #000000;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.35));
+  border-radius: 20px;
+  margin: 40px;
+}
+
+.about {
+  position: absolute;
+  height: 38px;
+  top: 98px;
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.charac {
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  max-width: 80%;
+  height: 120px;
+}
+
+.charac2 {
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 80%;
+  margin-top: 2em;
+}
+
+.more-infos {
+  width: 100%;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.know {
+  position: absolute;
+  height: 71px;
+  top: 606px;
+
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.line {
+  width: 783px;
+  height: 0px;
+  border: 1px solid #000000;
+  transform: rotate(0.15deg);
+}
+
+.kennel {
+  position: absolute;
+  height: 46px;
+  top: 1174px;
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.kennel-address {
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.kennel-email {
+
+font-family: 'Koh Santepheap';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 41px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rating {
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.considering {
+  position: absolute;
+  width: 316px;
+  height: 167px;
+  left: 1092px;
+  top: 988px;
+
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.read-about {
+  padding: 15px 20px;
+  background: #D9D9D9;
+  box-shadow: 1px 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 90px;
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  border: 0;
+}
+
+.adopt-button {
+  border: 3px solid #000000;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.35));
+  border-radius: 20px;
+  padding: 10px 42%;
+  width: 99%;
+  height: 61px;
+  text-align: center;
+  font-family: 'Inter Tight', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
