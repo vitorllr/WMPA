@@ -79,3 +79,4 @@ end
 
 gem "font-awesome-sass", "~> 6.1"
 gem "geocoder"
+gem "cloudinary"
