@@ -79,3 +79,4 @@ end
 
 
 gem "geocoder"
+gem "cloudinary"

@@ -1,0 +1,91 @@
+.card_kennel {
+  width: 700px;
+}
+
+.content_kennel {
+  width: 700px;
+  text-align: -webkit-center;
+  border-bottom: solid;
+}
+
+.hedears_kennel {
+  width: 700px;
+  background-color: rgb(151, 149, 149);
+  font-weight: bold;
+  border-radius: 10px 10px 0px 0px;
+  text-align: -webkit-center;
+}
+
+.dn {
+  top: 200px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-large {
+
+  width: 180px;
+  border-radius: 50%;
+
+}
+
+
+
+.name-pets {
+  width: 112px;
+  height: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.img-pets {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 260px;
+  height: 211px;
+  background: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.name-pets {
+  width: 112px;
+  height: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.dn-pets-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 10px;
+  width: 276px;
+  height: 294px;
+  margin-top: 8em;
+  background: #D9D9D9;
+  margin: 10px;
+}
