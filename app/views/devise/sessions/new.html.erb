@@ -1,7 +1,7 @@
+<h2 class="text-align-center">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-  <div class="form-inputs col-lg-5 text-center ml-5 pl-5 mt-5 pt-5">
-  <h2>Log in</h2>
+  <div class="form-inputs col-lg-5 text-center ml-5 pl-5 mt-5 pt-1" id="login-form">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
@@ -15,4 +15,5 @@
       <%= render "devise/shared/links" %>
     </div>
   </div>
+  <%= render "devise/shared/links" %>
 <% end %>
