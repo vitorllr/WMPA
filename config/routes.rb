@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :kennels do
-    resources :pets
+    resources :pets, except: ['index']
   end
+  get '/pets', to: 'pets#index'
 end
