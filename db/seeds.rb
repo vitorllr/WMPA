@@ -16,3 +16,6 @@ kennel =Kennel.create!(name: "Pata pet", address: "ipanema avenue", email:"patap
 kennel =Kennel.create!(name: "Dog house", address: "ipanema avenue", email:"doghouse@gmail.com", phone_number: "12345-33", user: user)
 kennel =Kennel.create!(name: "City of dog", address: "ipanema avenue", email:"cityofdog@gmail.com", phone_number: "12345-33", user: user)
 kennel = Kennel.create!(name: "Rio pet", address: "ipanema avenue", email:"riopet@gmail.com", phone_number: "12345-33", user: user)
+pet = Pet.create!(name: "Rex", age: 2, breed: "germansheper", kennel: kennel, user_id: user.id, gender: "female", tipo: true)
+pet = Pet.create!(name: "dolito", age: 2, breed: "germansheper", kennel: kennel, user_id: user.id, gender: "female", tipo: true)
+pet = Pet.create!(name: "happy", age: 2, breed: "germansheper", kennel: kennel, user_id: user.id, gender: "female", tipo: true)

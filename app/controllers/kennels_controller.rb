@@ -6,5 +6,4 @@ class KennelsController < ApplicationController
   def show
    @kennel = Kennel.find(params[:id])
   end
-
 end
