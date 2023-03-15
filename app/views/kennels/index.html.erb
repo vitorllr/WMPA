@@ -1,0 +1,58 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+      <div class="dn">  <h1><strong>All Kennels Available </strong></h1>
+       </div>
+      <div class="card-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="container mt-4">
+              <table id="datatable" class="table w-100">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Kennel</th>
+                          <th>Email</th>
+                          <th>Address</th>
+                          <th>Phone Number</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% @kennels.each do |kennel| %>
+                          <tr>
+
+                            <td><%= kennel.id %></td>
+                            <td><%= link_to kennel.name, kennel_path(kennel) %></td>
+                             <td><%= kennel.email %></td>
+                            <td><%= kennel.address %></td>
+                            <td><%= kennel.phone_number %></td>
+                          </tr>
+                      <% end %>
+                </div>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+  </div>
+
+        <!-- bootstrap5 dataTables js cdn -->
+        <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#datatable').DataTable();
+            });
+        </script>
+</div>
+</body>
