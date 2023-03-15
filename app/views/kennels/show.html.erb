@@ -1,0 +1,37 @@
+  <div class="container">
+
+    <div class="row pt-100">
+    <div class="col-3">
+      <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_duqifVHQRPAA_geJKb-RqQb2kQHobpbqg&usqp=CAU",
+        class: "avatar-large", alt: "avatar-large"%>
+      </div>
+      <div class="col-9">
+        <h1><%=  @kennel.name %></h1>
+        <h2> <%=  @kennel.address %></h2>
+        <h2> <%=  @kennel.phone_number%></h2>
+        <h2> <%=  @kennel.email %></h2>
+      </div>
+        </div>
+
+          <div class="card-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="container mt-4">
+                 <h2>Our Mission</h2>
+                <p>To provide a humane, no-kill, non-profit shelter for dogs and cats in Cumberland Countywho are homeless, abused and/or unwanted. To provide warm, nurturant surroundings for dogs and cats at the shelter. To provide medical care to dogs and cats at the shelter and to ensure that all animals are spayed or neutered. To seek loving, compatible homes for our dogs and cats. To work with shelters, humane organizations, and other rescue organizations to build a network of animal organizations to develop solutions and strategies for the community. To set up a system of foster homes for dogs and cats, especially for those who are very
+                  young or old or who have special needs. To raise awareness of animal welfare issues and to play an educational role in the community and particularly in the schools. To encourage the spaying and neutering of companion animals.</p>
+                <h2>Adoption Policy</h2>
+                <p>The shelter is located just outside of Amherst. For more information and to find us, go to our website at www.laanimalshelter.ca</p>
+          </div>
+        </div>
+    </div>
+    <%@kennel.pets.each do |pet|  %>
+      <div class="dn-pets-card">
+              <img class="img-pets" src="https://imagepng.org/wp-content/uploads/2017/12/cachorro-pug-raca-2.jpg" alt="">
+              <div class="name-pets"><%= pet.name %></div>
+              <div class="charac-pets"><%= pet.breed %></div>
+            </div>
+
+    <% end %>
+
+</div>
