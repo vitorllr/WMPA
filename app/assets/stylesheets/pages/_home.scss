@@ -1,21 +1,25 @@
 // Specific CSS for your home-page
-#user_email{
-  border-radius: 125px;
-}
-#user_password{
-  border-radius: 125px;
-}
-#user_phone_number{
-  border-radius: 125px
-}
-#user_name{
-  border-radius: 125px;
-}
-#user_password_confirmation{
+#user_email {
   border-radius: 125px;
 }
 
-.form-inputs{
+#user_password {
+  border-radius: 125px;
+}
+
+#user_phone_number {
+  border-radius: 125px
+}
+
+#user_name {
+  border-radius: 125px;
+}
+
+#user_password_confirmation {
+  border-radius: 125px;
+}
+
+.form-inputs {
   padding: 40px;
 }
 
@@ -86,21 +90,22 @@
 }
 
 .background-img {
-height: 32rem;
-background: black;
-background-size: cover;
-color: white;
-position: relative;
-background-position: center;
-background-size: cover;
+  height: 32rem;
+  background: black;
+  background-size: cover;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-size: cover;
 }
 
 .jt .wrapper {
-  display:flex;
+  display: flex;
   width: 70%;
   justify-content: space-around;
   position: relative;
 }
+
 .jt .card-1 {
   width: 180px;
   height: 160px;
@@ -108,7 +113,7 @@ background-size: cover;
   position: absolute;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   background-color: white;
   transition: 0.5s ease-in-out;
   left: 335px;
@@ -123,7 +128,7 @@ background-size: cover;
   position: absolute;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   background-color: white;
   transition: 0.5s ease-in-out;
   right: -6px;
@@ -149,7 +154,7 @@ background-size: cover;
   height: 100%;
   z-index: 2;
   transition: 0.5s all;
-  opacity:0;
+  opacity: 0;
 }
 
 .jt .card-2:before {
@@ -162,7 +167,7 @@ background-size: cover;
   height: 100%;
   z-index: 2;
   transition: 0.5s all;
-  opacity:0;
+  opacity: 0;
 }
 
 .jt .card-1:hover:before {
@@ -175,8 +180,8 @@ background-size: cover;
 
 .img-dog {
   height: 60%;
-    margin-left: 42px;
-    margin-bottom: 43px;
+  margin-left: 42px;
+  margin-bottom: 43px;
 }
 
 .card-1 h4 {
@@ -199,14 +204,17 @@ background-size: cover;
   padding-top: 250px;
   padding-bottom: 100px;
   background-color: black;
-  color:white;
+  color: white;
   display: flex;
   justify-content: center;
 }
 
 
+* {
+  border: solid 1px red
+}
 
 //::placeholder {
-  //color: #eee;
- // opacity: 2
+//color: #eee;
+// opacity: 2
 //}

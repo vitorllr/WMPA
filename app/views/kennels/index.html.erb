@@ -1,10 +1,12 @@
  <div class="container">
       <div class="dn">  <h1><strong>All Kennels Available </strong></h1>
        </div>
-      <div class="card-section">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="container mt-4">
+        <div class="card_kennel border">
+          <div class="hedears_kennel border">
+         <div class="row">
+            <div class="card-section">
+              <div class="col-xs-12">
+                <div class="container mt-4">
               <table id="datatable" class="table w-100">
                   <thead>
                       <tr>
@@ -15,7 +17,8 @@
                           <th>Phone Number</th>
                       </tr>
                   </thead>
-                  <tbody>
+                </div>
+                                  <tbody>
                       <%@kennels.each do |kennel|%>
                           <tr>
                             <td><%= kennel.id %></td>
@@ -42,4 +45,5 @@
                 $('#datatable').DataTable();
             });
         </script>
+</div>
 </div>

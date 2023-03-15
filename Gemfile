@@ -80,3 +80,4 @@ end
 gem "font-awesome-sass", "~> 6.1"
 gem "geocoder"
 gem "cloudinary"
+gem "dotenv-rails", groups: [:development, :test]
