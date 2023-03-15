@@ -1,29 +1,78 @@
 // Specific CSS for your home-page
 #user_email{
   border-radius: 125px;
+  width: 300px;
+
 }
 #user_password{
   border-radius: 125px;
+  width: 300px;
 }
 #user_phone_number{
-  border-radius: 125px
+  border-radius: 125px;
+  width: 300px;
 }
 #user_name{
   border-radius: 125px;
+  width: 300px;
+}
+
+#user_password_confirmation{
+  border-radius: 125px;
+  width: 300px;
+}
+
+#login-form{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#signup-form{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#titulo-vitor{
+  color:black
+}
+.form-actions{
+  border-radius: 125px;
+}
+
+.btn{
+  color:white;
+  border-radius: 125px;
+}
+
+// Sign up inputs
+#user_name{
+  border-radius: 125px;
+  width: 300px;
+
+}
+#user_phone_number{
+  border-radius: 125px;
+  width: 300px;
+}
+#user_email{
+  border-radius: 125px;
+  width: 300px;
+}
+#user_password{
+  border-radius: 125px;
+  width: 300px;
 }
 #user_password_confirmation{
   border-radius: 125px;
+  width: 300px;
 }
-.container_vr{
-  padding-left: 500px;
-}
-#title{
-  padding-left: 120px;
-}
-#login-form{}
-.form-inputs{
-  padding: 100px;
-}
+
+// Sign up inputs
+
+
+
 
 .banner {
   background-size: cover;
