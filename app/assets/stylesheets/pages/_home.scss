@@ -28,8 +28,22 @@
   display: flex;
   flex-direction: column;
 }
-.titulo-vitor{
+#signup-form{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#titulo-vitor{
   color:black
+}
+.form-actions{
+  border-radius: 125px;
+}
+
+.btn{
+  color:white;
+  border-radius: 125px;
 }
 
 // Sign up inputs
