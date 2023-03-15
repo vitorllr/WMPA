@@ -1,0 +1,45 @@
+ <div class="container">
+      <div class="dn">  <h1><strong>All Kennels Available </strong></h1>
+       </div>
+      <div class="card-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="container mt-4">
+              <table id="datatable" class="table w-100">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Kennel</th>
+                          <th>Email</th>
+                          <th>Address</th>
+                          <th>Phone Number</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <%@kennels.each do |kennel|%>
+                          <tr>
+                            <td><%= kennel.id %></td>
+                            <td><%= link_to kennel.name, kennel_path(kennel) %></td>
+                             <td><%= kennel.email %></td>
+                            <td><%= kennel.address %></td>
+                            <td><%= kennel.phone_number %></td>
+                          </tr>
+                      <% end %>
+                </div>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+  </div>
+
+        <!-- bootstrap5 dataTables js cdn -->
+        <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#datatable').DataTable();
+            });
+        </script>
+</div>
