@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new()
+    @user = User.new
   end
 
   def create
@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   def edit
     @restaurant = Restaurant.find(params[:id])
   end
+
   def update
     @user = User.find(params[:id])
     @user.update(params[:user])
