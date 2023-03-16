@@ -140,3 +140,8 @@ body {
 .cards a {
   max-height: 294px;
 }
+
+.lg-img {
+  height: 320px; /* height of container */
+  object-fit: cover;
+}

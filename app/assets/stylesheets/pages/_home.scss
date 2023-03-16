@@ -1,1 +1,264 @@
 // Specific CSS for your home-page
+.jt {
+  #user_email{
+    border-radius: 125px;
+  }
+  #user_password{
+    border-radius: 125px;
+  }
+  #user_phone_number{
+    border-radius: 125px
+  }
+  #user_name{
+    border-radius: 125px;
+  }
+  #user_password_confirmation{
+    border-radius: 125px;
+  }
+  .container_vr{
+    padding-left: 500px;
+  }
+  #title{
+    padding-left: 120px;
+  }
+  #login-form{}
+  .form-inputs{
+    padding: 100px;
+  }
+
+  .banner {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    height: 600px
+  }
+
+  .container h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 80px;
+    font-weight: bold;
+  }
+
+  .container h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .search {
+    padding: 4px;
+    border-radius: 5px
+  }
+
+  .search-1 {
+    position: relative;
+    width: 100%
+  }
+
+  .search-1 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 34px;
+    padding-right: 10px;
+    border-right: 2px solid #eee
+  }
+
+  .search-2 {
+    position: relative;
+    width: 100%
+  }
+
+  .search-2 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 100px
+  }
+
+  .search-2 button {
+
+    right: 1px;
+    top: 0px;
+    border: none;
+    height: 45px;
+    background-color: rgb(43, 0, 255);
+    color: #fff;
+    width: 90px;
+    border-radius: 4px
+  }
+
+  .background-img {
+  height: 32rem;
+  background: black;
+  background-size: cover;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  }
+
+  .jt .wrapper {
+    display:flex;
+    width: 70%;
+    justify-content: space-around;
+    position: relative;
+  }
+  .jt .card-1 {
+    width: 180px;
+    height: 160px;
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    left: 335px;
+    top: 90px;
+  }
+
+
+  .jt .card-2 {
+    width: 180px;
+    height: 160px;
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    right: -6px;
+    top: 90px;
+  }
+
+
+  .jt .card-1:hover {
+    transform: translateY(20px);
+  }
+
+  .jt .card-2:hover {
+    transform: translateY(20px);
+  }
+
+  .jt .card-1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity:0;
+  }
+
+  .jt .card-2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity:0;
+  }
+
+  .jt .card-1:hover:before {
+    opacity: 1;
+  }
+
+  .jt .card-2:hover:before {
+    opacity: 1;
+  }
+
+  .img-dog {
+    height: 60%;
+      margin-left: 42px;
+      margin-bottom: 43px;
+  }
+
+  .card-1 h4 {
+    font-weight: bold;
+    margin-left: -75px;
+  }
+
+  .card-2 h3 {
+    font-weight: bold;
+    margin-left: -90px;
+  }
+
+  .img-kennel {
+    height: 55%;
+    margin-left: 44px;
+    margin-bottom: 50px;
+  }
+
+  .below-banner {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel-inner {
+    padding: 1em;
+  }
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card img {
+      max-height: 100%;
+  }
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
+
+  .jt .container h1 {
+    margin-bottom: 150px;
+  }
+
+  .jt .row p {
+    color: white;
+  }
+}
