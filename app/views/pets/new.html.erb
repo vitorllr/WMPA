@@ -1,0 +1,13 @@
+
+<h2>Create your pet</h2>
+<%= simple_form_for [@kennel, @pet] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :breed %>
+  <%= f.input :gender %>
+  <%= f.input :tipo %>
+  <%= f.input :size %>
+  <%= f.input :charac %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
