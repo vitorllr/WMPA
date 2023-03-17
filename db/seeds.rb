@@ -73,3 +73,4 @@ pet = Pet.create!(name: "Xena", age:"adult" , breed: "Buldogue", kennel: kennel,
 pet = Pet.create!(name: "Jack", age: "young", breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
 pet = Pet.create!(name: "Leo", age:"adult" , breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
 pet = Pet.create!(name: "Duque", age: "young", breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
+

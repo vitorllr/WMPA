@@ -11,7 +11,8 @@ class KennelsController < ApplicationController
 
   end
 
-  def index
-    @kennels =  Kennel.all
-  end
-end
+    def index
+    @kennels = Kennel.all
+    end
+
+ end
