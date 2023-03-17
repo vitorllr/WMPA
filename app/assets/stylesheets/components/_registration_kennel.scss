@@ -1,40 +1,72 @@
+
 #pet_name{
   border-radius: 125px;
-
+  background-color: black ;
+  border-color: #04B4AE;
 
 }
 
 #pet_age{
   border-radius: 125px;
-  border-color: #04B4AE ;
+  background-color: #04B4AE ;
+  text-decoration: solid;
 }
 
 #pet_breed{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
 }
 
 #pet_gender{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
 }
 
 #pet_tipo{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
 }
 
 #pet_size{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
 }
 
 #pet_charac{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
 }
 
 #pet_photos{
   border-radius: 125px;
-  border-style: bold;
+  background-color: #04B4AE ;
+}
+
+// Kennel
+
+#kennel_name{
+  border-radius: 125px;
+  border-color: 3px #04B4AE;
+  border-width: 10px;
+
+}
+
+#kennel_address{
+  border-radius: 125px;
+  background-color: #04B4AE
+}
+
+#kennel_phone_number{
+  border-radius: 125px;
+  background-color: #04B4AE
+}
+
+#kennel_email{
+  border-radius: 125px;
+  background-color: #04B4AE
+}
+
+#kennel_photos{
+  border-radius: 125px;
+  background-color: #04B4AE
 }
