@@ -30,22 +30,22 @@
     <h2>Browse pets from our network of several kennels and rescues.</h2>
     <div class="jt">
       <div class="wrapper">
-        <div class="card-1">
-          <div class="img-dog">
-            <img src="https://cdn-icons-png.flaticon.com/512/194/194279.png" style="height: 100%;">
+        <%= link_to pets_path do %>
+          <div class="card-1">
+            <div class="img-dog">
+              <img src="https://cdn-icons-png.flaticon.com/512/194/194279.png" style="height: 100%;">
+            </div>
+            <h4> Dogs </h4>
           </div>
-          <h4> Dogs </h4>
-        </div>
-        <%# <%= link_to dogs_path do  %>
-          <%# <% end %>
+        <% end %>
+        <%= link_to kennels_path do %>
           <div class="card-2">
             <div class="img-kennel">
               <img src="https://cdn-icons-png.flaticon.com/512/4329/4329143.png" style="height: 100%;">
             </div>
             <h3> Kennels </h3>
           </div>
-          <%# <%= link_to kennel_path do  %>
-            <%# <% end %>
+        <% end %>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
     <div class="below-banner">
       <h1><strong>How does it work?</strong></h1>
       <div class="how d-flex justify-content-between text-center container">
-        <div class="card-product">
+        <div class="card-product-1">
           <img src="https://cdn-icons-png.flaticon.com/512/21/21656.png" style="100px"/>
           <div class="card-product-infos">
             <h2>1st Step</h2>
@@ -61,7 +61,7 @@
             <h4>Choose a breed of choice.</h4>
           </div>
         </div>
-        <div class="card-product">
+        <div class="card-product-1">
           <img src="https://cdn-icons-png.flaticon.com/512/2954/2954455.png" style="100px"/>
           <div class="card-product-infos">
             <h2>2nd Step</h2>
@@ -69,7 +69,7 @@
             <h4>Look if that breed is available to adopt.</h4>
           </div>
         </div>
-        <div class="card-product">
+        <div class="card-product-1">
           <img src="https://cdn-icons-png.flaticon.com/512/769/769660.png" style="100px"/>
           <div class="card-product-infos">
             <h2>3rd Step</h2>
@@ -181,4 +181,3 @@
     </div>
   </div>
 </div>
-
