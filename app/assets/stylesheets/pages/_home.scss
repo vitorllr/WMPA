@@ -20,7 +20,7 @@
   width: 300px;
 }
 
-<#user_password_confirmation {
+#user_password_confirmation {
   border-radius: 125px;
   width: 300px;
 }
@@ -369,14 +369,7 @@
 }
 
 
-* {
-  border: solid 1px red
-}
-
-//::placeholder {
-//color: #eee;
-// opacity: 2
-//}
+.below-banner {
   padding-top: 155px;
   padding-bottom: 200px;
   background-color: #04B4AE;
