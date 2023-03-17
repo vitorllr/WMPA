@@ -80,3 +80,4 @@ end
 
 gem "geocoder"
 gem "cloudinary"
+gem "dotenv-rails", groups: [:development, :test]
