@@ -1,13 +1,18 @@
+<div class="todos">
 
-<h2>Create your pet</h2>
-<%= simple_form_for [@kennel, @pet] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Senior' => 'Senior'} %>
-  <%= f.input :breed %>
-  <%= f.input :gender, :collection => {"Male" => "Male", "Female" => "Female"} %>
-  <%= f.input :tipo, :collection => {'Adoption' => 'Adoption', 'Sale' => 'Sale'}%>
-  <%= f.input :size, :collection => {"Small" => "Small", "Medium" => "Medium", "Big" => "Big"} %>
-  <%= f.input :charac %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+  <div class="form-inputs text-center ml-5 pl-5 mt-5 pt-1" id="signup-form">
+
+    <h2>Create your pet</h2>
+    <%= simple_form_for [@kennel, @pet] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Senior' => 'Senior'} %>
+      <%= f.input :breed %>
+      <%= f.input :gender, :collection => {"Male" => "Male", "Female" => "Female"} %>
+      <%= f.input :tipo, :collection => {'Adoption' => 'Adoption', 'Sale' => 'Sale'}%>
+      <%= f.input :size, :collection => {"Small" => "Small", "Medium" => "Medium", "Big" => "Big"} %>
+      <%= f.input :charac %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
