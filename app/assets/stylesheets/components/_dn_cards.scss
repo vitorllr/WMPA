@@ -1,0 +1,38 @@
+.dn .card {
+  background: #fff;
+  border-radius: 8px;
+  width: 302px;
+}
+
+.dn .card .image-box {
+  height: 200px;
+}
+
+.dn .card .image-box img {
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.dn .card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+
+.dn .card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dn .profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dn .profile-details .age {
+  font-size: 12px;
+  font-weight: 400;
+  color: #4D4D4D;
+}

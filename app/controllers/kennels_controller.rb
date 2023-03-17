@@ -1,10 +1,16 @@
 class KennelsController < ApplicationController
   def index
-    @kennels = Kennel.all
+    @kennels = Kennel.all  
   end
-
+  
   def show
     @kennel = Kennel.find(params[:id])
+    @pets = Pet.where(kennel_id:@kennel.id)
+    @markers = [{
+                  lat: @kennel.latitude,
+                  lng: @kennel.longitude,
+                  info_window_html: render_to_string(partial: "info_window", locals: {kennel: @kennel})
+                }]
   end
 
   def new
@@ -35,4 +41,5 @@ class KennelsController < ApplicationController
   def kennel_params
     params.require(:kennel).permit(:name, :address, :phone_number, :email, :photos)
   end
-end
+
+ end
