@@ -5,9 +5,13 @@
         <div class="breed mb-2">Breed</div>
         <select name="breed">
           <option value="any" selected>Any</option>
-          <option value="pug">Pug</option>
-          <option value="chow chow">Chow Chow</option>
-          <option value="puddle">Puddle</option>
+          <% raças = [] %>
+          <% @pets.each do |pet| %>
+            <% if raças.include?(pet.breed) == false %>
+              <option value="<%= pet.breed %>"><%= pet.breed %></option>
+            <% end %>
+            <% raças << pet.breed %>
+          <% end %>
         </select>
         <div class="breed mb-2">Gender</div>
         <select name="gender">
@@ -35,14 +39,14 @@
       </form>
     </div>
     <div class="col-12 col-lg-8 margin-esquerda">
-      <%= link_to '<i class="fa-solid fa-arrow-left mt-5 position"> <span class="ms-2"> Back </span></i>'.html_safe, root_path %>
+      <%= link_to '<i class="fa-solid fa-arrow-left mt-5 position"> <span class="ms-2"> Back </span></i>'.html_safe, root_path, class:"position"%>
       <div class="cards">
         <% @pets.each do |pet| %>
           <% if params[:breed] != nil || params[:gender] != nil || params[:age] != nil || params[:size] != nil  %>
             <% if pet.breed.upcase == params[:breed].upcase || pet.gender.upcase == params[:gender].upcase || pet.age.upcase == params[:age].upcase || pet.size.upcase == params[:size].upcase %>
               <%= link_to kennel_pet_path(kennel_id: pet.kennel_id, id: pet) do %>
                 <div class="lg-pets-card">
-                  <img class="img-pets" src="https://imagepng.org/wp-content/uploads/2017/12/cachorro-pug-raca-2.jpg" alt="">
+                  <%= cl_image_tag pet.photos.first.key, crop: :fill, class: "img-pets" %>
                   <div class="name-pets"><%= pet.name %></div>
                   <div class="charac-pets"><%= pet.charac %></div>
                 </div>
@@ -50,7 +54,7 @@
             <% elsif params[:breed] == "any" && params[:gender] == "any" && params[:age]  == "any" && params[:size]  == "any" %>
               <%= link_to kennel_pet_path(kennel_id: pet.kennel_id, id: pet) do %>
                 <div class="lg-pets-card">
-                  <img class="img-pets" src="https://imagepng.org/wp-content/uploads/2017/12/cachorro-pug-raca-2.jpg" alt="">
+                  <%= cl_image_tag pet.photos.first.key, crop: :fill, class: "img-pets" %>
                   <div class="name-pets"><%= pet.name %></div>
                   <div class="charac-pets"><%= pet.charac %></div>
                 </div>
@@ -59,7 +63,7 @@
           <% else %>
             <%= link_to kennel_pet_path(kennel_id: pet.kennel_id, id: pet) do %>
               <div class="lg-pets-card">
-                <img class="img-pets" src="https://imagepng.org/wp-content/uploads/2017/12/cachorro-pug-raca-2.jpg" alt="">
+                <%= cl_image_tag pet.photos.first.key, crop: :fill, class: "img-pets" %>
                 <div class="name-pets"><%= pet.name %></div>
                 <div class="charac-pets"><%= pet.charac %></div>
               </div>

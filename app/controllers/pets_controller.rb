@@ -9,7 +9,7 @@ class PetsController < ApplicationController
     @markers = [{
                   lat: @kennel.latitude,
                   lng: @kennel.longitude,
-                  info_window_html: render_to_string(partial: "info_window", locals: {kennel: @kennel})
+                  info_window_html: render_to_string(partial: "info_window", locals: { kennel: @kennel })
                 }]
   end
 
@@ -20,13 +20,14 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(pet_params)
-    @pet.kennel_id = params[:kennel_id]
+    @kennel = Kennel.find(params[:kennel_id])
+    @pet.kennel = @kennel
+    @pet.user_id = @kennel.user_id
     if @pet.save
-      redirect_to pet_path(@pet)
+      redirect_to kennel_pet_path(@kennel, @pet)
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   def edit
@@ -41,6 +42,6 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :age, :breed, :tipo, :size, :charac, :photos)
+    params.require(:pet).permit(:name, :health, :coat, :age, :breed, :gender, :tipo, :size, :charac, photos: [])
   end
 end

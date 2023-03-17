@@ -1,35 +1,32 @@
-<%= link_to '<i class="fa-solid fa-arrow-left mt-5 ms-5"> <span class="ms-2"> Back </span></i>'.html_safe, root_path %>
+<%= link_to '<i class="fa-solid fa-arrow-left mt-5 ms-5 black"> <span class="ms-2"> Back </span></i>'.html_safe, pets_path %>
 <div class="lg-container">
-  <div class="text-center title"><%= @pet.name %></div>
-  <div id="carouselExampleIndicators" class="carousel slide mt-5 mb-5">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
+  <div class="text-center title mb-4"><%= @pet.name %></div>
+  <div id="carouselExample" class="carousel slide mb-3">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg" class="d-block w-100 img-fluid" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://blog.cobasi.com.br/wp-content/uploads/2020/12/pug-filhote-capa.png" class="d-block w-100 img-fluid" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mops_oct09_cropped.jpg/800px-Mops_oct09_cropped.jpg" class="d-block w-100 img-fluid" alt="...">
-      </div>
+      <% @pet.photos.each do |photo| %>
+        <% if photo.key == @pet.photos.first.key %>
+          <div class="carousel-item active">
+            <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100 lg-img" %>
+          </div>
+        <% else %>
+          <div class="carousel-item ">
+            <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100 lg-img" %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
   <div class="lg-container">
     <div class="dog-infos mt-3">
-      <span class="text-center ms-5 me-5">Breed: <%= @pet.breed.capitalize %></span>
+      <span class="text-center ms-5 me-5">Breed: <%= @pet.breed %></span>
       <span class="text-center ms-5 me-5">Gender: <%= @pet.gender %></span>
       <span class="text-center ms-5 me-5">Age: <%= @pet.age %></span>
       <span class="text-center">Size: <%= @pet.size %></span>
@@ -63,8 +60,8 @@
         </defs>
       </svg>
       <div class="lg-container more-infos">
-        <div class="charac text-center">Coat Length: Pelagem Baixa</div>
-        <div class="charac2">Health: Saudável</div>
+        <div class="charac text-center">Coat Length: <%= @pet.coat %></div>
+        <div class="charac2">Health: <%= @pet.health %></div>
       </div>
       <div class="line mt-5"></div>
       <span class="know mb-2 me-1">Get To Know <%= @pet.name.capitalize %></span>

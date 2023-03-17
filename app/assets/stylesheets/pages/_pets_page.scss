@@ -1,6 +1,5 @@
 body {
   height: 100%;
-  margin-bottom: 14em;
 }
 
 .dogs-page {
@@ -37,11 +36,24 @@ body {
     background: #A59C9C;
     border-radius: 15px;
     }
+
+  input {
+    width: 214px;
+    height: 40px;
+    color: white;
+    background: #A59C9C;
+    border-radius: 15px;
+    border: 0;
+  }
 }
 
 .position {
   color:white;
   width: 121px;
+  height: 37.13px;
+}
+
+.altura {
   height: 37.13px;
 }
 
@@ -66,6 +78,7 @@ body {
   height: 211px;
 
   background: #FFFFFF;
+  object-fit: cover;
 
   /* Inside auto layout */
 
@@ -139,4 +152,9 @@ body {
 
 .cards a {
   max-height: 294px;
+}
+
+.lg-img {
+  height: 420px;
+  object-fit: cover;
 }
