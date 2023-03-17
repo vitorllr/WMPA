@@ -1,0 +1,9 @@
+<h2>Create your kennel</h2>
+<%= simple_form_for [@kennel] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :email %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
