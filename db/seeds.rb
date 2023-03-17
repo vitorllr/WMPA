@@ -8,6 +8,8 @@
 Pet.destroy_all
 Kennel.destroy_all
 User.destroy_all
+Pet.destroy_all
+
 user = User.create!(email: "cod@gmail.com", password: "123456", name: "dogcod", phone_number: "12345-33", role: "user")
 
 kennel = Kennel.create!(name: "Doglovers", address: "ipanema avenue", email:"doglover@gmail.com", phone_number: "12345-33", user: user)
@@ -73,4 +75,3 @@ pet = Pet.create!(name: "Xena", age:"adult" , breed: "Buldogue", kennel: kennel,
 pet = Pet.create!(name: "Jack", age: "young", breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
 pet = Pet.create!(name: "Leo", age:"adult" , breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
 pet = Pet.create!(name: "Duque", age: "young", breed: "Buldogue", kennel: kennel, user_id: user.id, gender: "female", tipo: true, size:"small",charac:"happy")
-
