@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_135827) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_16_145935) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,10 +66,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_135827) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "gender"
-    t.boolean "tipo"
+    t.string "tipo"
     t.string "size"
     t.text "charac"
     t.string "photos"
+    t.string "health"
+    t.string "coat"
     t.index ["kennel_id"], name: "index_pets_on_kennel_id"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
