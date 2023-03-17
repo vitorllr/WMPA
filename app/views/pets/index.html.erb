@@ -39,7 +39,7 @@
       </form>
     </div>
     <div class="col-12 col-lg-8 margin-esquerda">
-      <%= link_to '<i class="fa-solid fa-arrow-left mt-5 position"> <span class="ms-2"> Back </span></i>'.html_safe, root_path %>
+      <%= link_to '<i class="fa-solid fa-arrow-left mt-5 position"> <span class="ms-2"> Back </span></i>'.html_safe, root_path, class:"position"%>
       <div class="cards">
         <% @pets.each do |pet| %>
           <% if params[:breed] != nil || params[:gender] != nil || params[:age] != nil || params[:size] != nil  %>
