@@ -1,6 +1,7 @@
 #user_email{
   border-radius: 125px;
   width: 300px;
+
 }
 #user_password{
   border-radius: 125px;
@@ -14,10 +15,12 @@
   border-radius: 125px;
   width: 300px;
 }
+
 #user_password_confirmation{
   border-radius: 125px;
   width: 300px;
 }
+
 #login-form{
   align-items: center;
   justify-content: center;
@@ -36,14 +39,17 @@
 .form-actions{
   border-radius: 125px;
 }
+
 .btn{
   color:white;
   border-radius: 125px;
 }
+
 // Sign up inputs
 #user_name{
   border-radius: 125px;
   width: 300px;
+
 }
 #user_phone_number{
   border-radius: 125px;
@@ -61,13 +67,19 @@
   border-radius: 125px;
   width: 300px;
 }
+
 // Sign up inputs
+
+
+
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   height: 800px
 }
+
 .container h1 {
   display: flex;
   justify-content: center;
@@ -75,20 +87,24 @@
   margin-top: 80px;
   font-weight: bold;
 }
+
 .container h2 {
   display: flex;
   justify-content: center;
   color: white;
   margin-top: 20px;
 }
+
 .search {
   padding: 4px;
   border-radius: 5px
 }
+
 .search-1 {
   position: relative;
   width: 100%
 }
+
 .search-1 input {
   height: 45px;
   border: none;
@@ -97,10 +113,12 @@
   padding-right: 10px;
   border-right: 2px solid #eee
 }
+
 .search-2 {
   position: relative;
   width: 100%
 }
+
 .search-2 input {
   height: 45px;
   border: none;
@@ -108,6 +126,7 @@
   padding-left: 18px;
   padding-right: 100px
 }
+
 .search-2 button {
   right: 1px;
   top: 0px;
@@ -118,6 +137,7 @@
   width: 90px;
   border-radius: 4px
 }
+
 .background-img {
 height: 32rem;
 background: black;
@@ -127,6 +147,7 @@ position: relative;
 background-position: center;
 background-size: cover;
 }
+
 .jt .wrapper {
   display:flex;
   width: 70%;
@@ -146,6 +167,8 @@ background-size: cover;
   left: 335px;
   top: 90px;
 }
+
+
 .jt .card-2 {
   width: 180px;
   height: 160px;
@@ -159,12 +182,16 @@ background-size: cover;
   right: -57px;
   top: 90px;
 }
+
+
 .jt .card-1:hover {
   transform: translateY(20px);
 }
+
 .jt .card-2:hover {
   transform: translateY(20px);
 }
+
 .jt .card-1:before {
   content: "";
   position: absolute;
@@ -177,6 +204,7 @@ background-size: cover;
   transition: 0.5s all;
   opacity:0;
 }
+
 .jt .card-2:before {
   content: "";
   position: absolute;
@@ -189,30 +217,37 @@ background-size: cover;
   transition: 0.5s all;
   opacity:0;
 }
+
 .jt .card-1:hover:before {
   opacity: 1;
 }
+
 .jt .card-2:hover:before {
   opacity: 1;
 }
+
 .img-dog {
   height: 60%;
     margin-left: 42px;
     margin-bottom: 43px;
 }
+
 .card-1 h4 {
   font-weight: bold;
   margin-left: -75px;
 }
+
 .card-2 h3 {
   font-weight: bold;
   margin-left: -90px;
 }
+
 .img-kennel {
   height: 55%;
   margin-left: 44px;
   margin-bottom: 50px;
 }
+
 .below-banner {
   padding-top: 155px;
   padding-bottom: 200px;
@@ -221,31 +256,38 @@ background-size: cover;
   // display: flex;
   // justify-content: center;
 }
+
 .jt .row p {
   color: white;
 }
+
 .how {
   display:flex;
   align-items:center;
   justify-content:center;
 }
+
 .below-banner h1 {
   text-align: center;
   margin: 20px 0;
   padding-bottom: 100px;
   font-size: 60px;
 }
+
 .card-product {
   max-width: 300px;
 }
+
 .card-product img {
   height: 115px;
   width: 140px;
   object-fit: contain;
 }
+
 .card-product h2 {
   font-weight:bold;
 }
+
 .jtw .banner h1 {
   text-align: center;
   margin: 20px 0;
@@ -253,47 +295,57 @@ background-size: cover;
   font-size: 60px;
   color: white;
 }
+
 .jtw .container {
   max-width: 1120px;
   width: 100%;
   // background-color: grey;
 }
+
 .jtw .card {
   background: #fff;
   border-radius: 8px;
   width: 302px;
 }
+
 .jtw .card .image-box {
   height: 200px;
 }
+
 .jtw .card .image-box img{
   height: 100%;
   border-radius: 8px 8px 0 0;
 }
+
 .jtw .card .profile-details {
   display: flex;
   align-items: center;
   column-gap: 12px;
   padding: 15px;
 }
+
 .jtw .card .profile-details img{
   height: 40px;
   width: 40px;
   border-radius: 50%;
 }
+
 .jtw .profile-details .name{
   font-size: 15px;
   font-weight: 500;
 }
+
 .jtw .profile-details .age{
   font-size: 12px;
   font-weight: 400;
-  color: #4D4D4D;
+  color: #4d4d4d;
 }
+
 .swiper {
   width: 100%;
   height: 330px;
 }
+
 .swiper-navBtn {
   color: #04B4AE;
   height: 40px;
@@ -301,13 +353,16 @@ background-size: cover;
   // background-color: white;
   // border-radius: 50%;
 }
+
 .swiper-navBtn::before,
 .swiper-navBtn::after {
   font-size: 30px;
 }
+
 .swiper-pagination-bullet {
   background-color: white;
 }
+
 .swiper-pagination-bullet-active {
   background-color: #04B4AE;
 }
