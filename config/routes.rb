@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "pages#home"
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :pets, except: ['index']
   end
   get '/pets', to: 'pets#index'
+  post '/pets', to: 'pets#create'
 end
