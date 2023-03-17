@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :pets, except: ['index']
   end
   get '/pets', to: 'pets#index'
+  post '/pets', to: 'pets#create'
 end

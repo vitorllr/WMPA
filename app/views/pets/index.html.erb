@@ -5,9 +5,13 @@
         <div class="breed mb-2">Breed</div>
         <select name="breed">
           <option value="any" selected>Any</option>
-          <option value="pug">Pug</option>
-          <option value="chow chow">Chow Chow</option>
-          <option value="puddle">Puddle</option>
+          <% raças = [] %>
+          <% @pets.each do |pet| %>
+            <% if raças.include?(pet.breed) == false %>
+              <option value="<%= pet.breed %>"><%= pet.breed %></option>
+            <% end %>
+            <% raças << pet.breed %>
+          <% end %>
         </select>
         <div class="breed mb-2">Gender</div>
         <select name="gender">

@@ -1,8 +1,9 @@
-
 <h2>Create your pet</h2>
 <%= simple_form_for [@kennel, @pet] do |f| %>
   <%= f.input :name %>
-  <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Senior' => 'Senior'} %>
+  <%= f.input :health %>
+  <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Adult' => 'Adult', 'Senior' => 'Senior'} %>
+  <%= f.input :coat, :collection => { 'Short' => 'Short', 'Long' => 'Long', 'Hairless' => 'Hairless', 'Combination' => 'Combination'} %>
   <%= f.input :breed %>
   <%= f.input :gender, :collection => {"Male" => "Male", "Female" => "Female"} %>
   <%= f.input :tipo, :collection => {'Adoption' => 'Adoption', 'Sale' => 'Sale'}%>

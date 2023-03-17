@@ -35,4 +35,32 @@ export default class extends Controller {
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
+
+  pesquisa() {
+    const results = document.querySelector("#results")
+    const input = document.querySelector(".input-dogs")
+
+    fetch("https://dog.ceo/api/breeds/list/all")
+    .then((response) => response.json())
+    .then((data) => { data.Search.forEach((result) => {
+      const movieTag = `<li class="list-inline-item">
+        <p>${result}</p>
+      </li>`
+      results.insertAdjacentHTML("beforeend", movieTag)
+    })});
+  }
 }
+
+const results = document.querySelector("#results")
+const input = document.querySelector(".input-dogs")
+
+fetch("https://dog.ceo/api/breeds/list/all")
+.then((response) => response.json())
+.then((data) => { data.Search.forEach((result) => {
+  const movieTag = `<li class="list-inline-item">
+    <p>${result}</p>
+  </li>`
+  results.insertAdjacentHTML("beforeend", movieTag)
+}
+)
+});
