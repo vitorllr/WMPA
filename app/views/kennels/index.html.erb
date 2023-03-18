@@ -1,51 +1,59 @@
  <div class="container">
-      <div class="dn">  <h1><strong>All Kennels Available </strong></h1>
-      </div>
-        <div class="card_kennel border">
-          <div class="hedears_kennel border">
-            <div class="row">
+    <div id="table-kennel-center">
+        <h1 class="kennel_title"><strong>All Kennels Available </strong></h1>
+          <div class="card_kennel border">
+            <div class="hedears_kennel border">
               <div class="card-section">
-                <div class="col-xs-12">
-                  <div class="container mt-4">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="container mt-4">
 
-                    <table id="datatable" class="table w-100">
-                    <thead>
-                      <tr>
-                          <th>ID</th>
-                          <th>Kennel</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                          <th>Phone Number</th>
-                      </tr>
-                    </thead>
+                      <table id="datatable" class="table w-100">
+                      <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Kennel</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                        </tr>
+                      </thead>
+                    </div>
+                      <tbody>
+                      <%@kennels.each do |kennel|%>
+                            <tr>
+                              <td><%= kennel.id %></td>
+                              <td><%= link_to kennel.name, kennel_path(kennel) %></td>
+                              <td><%= kennel.email %></td>
+                              <td><%= kennel.address %></td>
+                              <td><%= kennel.phone_number %></td>
+                            </tr>
+                        <% end %>
                   </div>
-                    <tbody>
-                     <%@kennels.each do |kennel|%>
-                          <tr>
-                            <td><%= kennel.id %></td>
-                            <td><%= link_to kennel.name, kennel_path(kennel) %></td>
-                             <td><%= kennel.email %></td>
-                            <td><%= kennel.address %></td>
-                            <td><%= kennel.phone_number %></td>
-                          </tr>
-                      <% end %>
-                </div>
-                   </tbody>
-              </table>
+                    </tbody>
+                </table>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
 
         <!-- bootstrap5 dataTables js cdn -->
-        <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#datatable').DataTable();
-            });
-        </script>
+
+          <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+          <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css">
+          <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+          <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+          <script defer src="script.js"></script>
+
+          <script>
+              $(document).ready(function() {
+                  $('#datatable').DataTable();
+              });
+          </script>
+    </div>
   </div>
 </div>
-
+</div>
