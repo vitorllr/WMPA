@@ -1,8 +1,15 @@
 <div class="container">
   <div class="row pt-100">
     <div class="col-3">
-      <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_duqifVHQRPAA_geJKb-RqQb2kQHobpbqg&usqp=CAU",
-        class: "avatar-large", alt: "avatar-large"%>
+      <% if @kennel.photos.attached? %>
+        <div class="kennel-photos">
+          <% @kennel.photos.each do |photo| %>
+            <%= image_tag photo %>
+          <% end %>
+        </div>
+      <% else %>
+        <p>No photos found.</p>
+      <% end %>
     </div>
     <div class="col-9 ">
       <div class="row">
@@ -12,15 +19,6 @@
           <p><strong>Phone Number:</strong> <%= @kennel.phone_number %></p>
           <p><strong>Email:</strong> <%= @kennel.email %></p>
         </div>
-        <% if @kennel.photos.attached? %>
-          <div class="kennel-photos">
-            <% @kennel.photos.each do |photo| %>
-              <%= image_tag photo %>
-            <% end %>
-          </div>
-        <% else %>
-          <p>No photos found.</p>
-        <% end %>
       </div>
     </div>
   </div>
@@ -33,10 +31,10 @@
       </div>
       <div class="col-12 col-lg-6">
         <h2 id="kennel-mission">Our Mission</h2>
-        <p>To provide a humane, no-kill, non-profit shelter for dogs and cats in Cumberland Countywho are homeless, abused and/or unwanted. To provide warm, nurturant surroundings for dogs and cats at the shelter. To provide medical care to dogs  at the shelter and to ensure that all animals are spayed or neutered. To seek loving, compatible homes for our dogs. To work with shelters, humane organizations, and other rescue organizations to build a network of animal organizations to develop solutions and strategies for the community. To set up a system of foster homes for dogs and cats, especially for those who are very
+        <p>To provide a humane, non-profit shelter for dogs and in Cumberland Countywho are homeless, abused and/or unwanted. To provide warm, nurturant surroundings for dogs at the shelter. To provide medical care to dogs  at the shelter and to ensure that all animals are spayed or neutered. To seek loving, compatible homes for our dogs. To work with shelters, humane organizations, and other rescue organizations to build a network of animal organizations to develop solutions and strategies for the community. To set up a system of foster homes for dogs, especially for those who are very
           young or old or who have special needs. To raise awareness of animal welfare issues and to play an educational role in the community and particularly in the schools. To encourage the spaying and neutering of companion animals.</p>
         <h2 id="kennel-policy">Adoption Policy</h2>
-        <p>The shelter is located just in Ipanema rio de janeiro. For more information and to find us, go to our website at www.wmpa.com</p>
+        <p>The shelter is located just in Ipanema rio de janeiro. For more information and to find us, go to our website at https://where-my-pet-at.herokuapp.com/</p>
       </div>
     </div>
   </div>
