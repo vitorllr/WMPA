@@ -1,8 +1,8 @@
 class KennelsController < ApplicationController
   def index
-    @kennels = Kennel.all  
+    @kennels = Kennel.all
   end
-  
+
   def show
     @kennel = Kennel.find(params[:id])
     @pets = Pet.where(kennel_id:@kennel.id)
@@ -42,4 +42,4 @@ class KennelsController < ApplicationController
     params.require(:kennel).permit(:name, :address, :phone_number, :email, :photos)
   end
 
- end
+end

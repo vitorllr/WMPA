@@ -1,9 +1,12 @@
-<h2>Create your kennel</h2>
-<%= simple_form_for [@kennel] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone_number %>
-  <%= f.input :email %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+<div class="form-inputs text-center ml-5 pl-5 mt-5 pt-1 mb-5" id="signup-form">
+
+  <h2>Create your kennel</h2>
+  <%= simple_form_for [@kennel] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :email %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+</div>
