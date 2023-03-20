@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background:  #04B4AE;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +11,16 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.dropdown-menu{
+  font-size: 13px;
+}
+
+#contact{
+  padding-right: 10px;
+}
+
+.nav-link{
+  color:black
 }

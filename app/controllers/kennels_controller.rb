@@ -19,8 +19,9 @@ class KennelsController < ApplicationController
 
   def create
     @kennel = Kennel.new(kennel_params)
+    @kennel.user = current_user
     if @kennel.save
-      redirect_to pet_path(@kennel)
+      redirect_to kennel_path(@kennel)
     else
       render :new, status: :unprocessable_entity
     end
