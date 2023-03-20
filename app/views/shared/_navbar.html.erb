@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://www.shareicon.net/data/2015/11/04/666614_animal_512x512.png" %>
     <% end %>
 
@@ -11,17 +11,38 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+          <li class="nav-item dropdown mt-2">
+            <p class=" dropdown-toggle" id="contact" data-bs-toggle="dropdown" aria-expanded="false">
+              Contact us
+            </p>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <p class=" px-3 text-justify">
+              Email: wheremypetat@gmail.com
+              Phone number: +5521999999999
+              </p>
+            </div>
+          </li>
+          <li class="nav-item dropdown mt-2">
+            <p class=" dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              About us
+            </p>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <p class="p-2 px-3 text-justify">
+              Our goal is to help you find your dream best friend the easiest way! We only work with kennels and institutions that
+              follow international good animal care standards.
+              </p>
+            </div>
+          </li>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Create a Kennel", "#", class: "nav-link" %>
+            <%= link_to "Create a Kennel", new_kennel_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/zetohouse", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Edit your Profile", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
