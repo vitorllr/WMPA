@@ -156,7 +156,7 @@
         </defs>
       </svg>
       <button class="read-about mb-5">Read about the cares need it</button>
-      <a class="adopt-button mb-1" href="#">Adopt</a>
+      <%= link_to "Adopt", kennel_path(@kennel)%>
     </div>
     <div style="width: 80%; height: 600px;" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="ms-5 border border-3 border-secondary rounded-4">
     </div>
