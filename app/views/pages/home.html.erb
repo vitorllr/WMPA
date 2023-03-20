@@ -2,25 +2,14 @@
   <div class="container">
     <div class="search">
       <div class="row">
-        <div class="col-lg-6 text-center">
-          <div class="search-1">
-            <input type="text" class="searchTerm" placeholder="Search breed">
-          </div>
-        </div>
-        <div class="col-lg-6 text-center">
-          <div class="row">
-            <div class="col-11">
-              <div class="search-1">
-                <input type="text" class="searchTerm" placeholder="Enter city, state, ...">
-              </div>
-            </div>
-            <div class="col-1 text-center">
-              <div class="search-2">
-                <button type="submit" class="searchButton">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
+        <div class="col text-center">
+          <div class="search">
+            <%= form_with url: pets_path, method: :get, class: "d-flex" do %>
+              <%= select_tag(:query, options_for_select(Pet.all.map{ |u| [u.breed] }.uniq), data: {controller: "tom-select"}, class: "form-control")%>
+              <%= button_tag "Search", type: "submit", class: "btn btn-primary" do %>
+                <i class="fa fa-search"></i>
+              <%end%>
+            <% end %>
           </div>
         </div>
       </div>
@@ -66,7 +55,7 @@
           <div class="card-product-infos">
             <h2>2nd Step</h2>
             <br>
-            <h4>Look if that breed is available to adopt.</h4>
+            <h4>Look if that breed is available for adoption.</h4>
           </div>
         </div>
         <div class="card-product-1">

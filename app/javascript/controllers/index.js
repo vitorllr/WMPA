@@ -12,3 +12,6 @@ application.register("map", MapController)
 
 import SwiperController from "./swiper_controller"
 application.register("swiper", SwiperController)
+
+import TomSelectController from "./tom_select_controller"
+application.register("tom-select", TomSelectController)

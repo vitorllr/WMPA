@@ -132,6 +132,7 @@
   margin-top: 80px;
   font-weight: bold;
   color:white;
+  font-size: 60px;
 }
 
 .container h2 {
@@ -146,43 +147,65 @@
   border-radius: 5px
 }
 
-.search-1 {
-  position: relative;
-  width: 100%
+.search button {
+  margin-left: 40px;
+  border-radius: 30%;
+  width: 66px;
 }
 
-.search-1 input {
-  height: 45px;
-  border: none;
-  width: 100%;
-  padding-left: 34px;
-  padding-right: 10px;
-  border-right: 2px solid #eee
+.ts-dropdown {
+  font-size: large;
 }
 
-.search-2 {
-  position: relative;
-  width: 100%
+#query-ts-control {
+  font-size: 20px;
 }
 
-.search-2 input {
-  height: 45px;
-  border: none;
-  width: 100%;
-  padding-left: 18px;
-  padding-right: 100px
+.ts-control .item {
+  font-size: 20px;
 }
 
-.search-2 button {
-  right: 1px;
-  top: 0px;
-  border: none;
-  height: 45px;
-  background-color: #04B4AE;
-  color: #fff;
-  width: 90px;
-  border-radius: 4px
+.ts-dropdown, .ts-control, .ts-control input {
+  line-height: inherit;
 }
+
+// .search-1 {
+//   position: relative;
+//   width: 100%
+// }
+
+// .search-1 input {
+//   height: 45px;
+//   border: none;
+//   width: 100%;
+//   padding-left: 34px;
+//   padding-right: 10px;
+//   border-right: 2px solid #eee
+// }
+
+// .search-2 {
+//   position: relative;
+//   width: 100%
+// }
+
+// .search-2 input {
+//   height: 45px;
+//   border: none;
+//   width: 100%;
+//   padding-left: 18px;
+//   padding-right: 100px
+// }
+
+// .search-2 button {
+//   right: 1px;
+//   top: 0px;
+//   border: none;
+//   height: 45px;
+//   background-color: #04B4AE;
+//   color: #fff;
+//   width: 90px;
+//   border-radius: 4px
+// }
 
 .background-img {
   height: 32rem;

@@ -29,16 +29,16 @@ export default class extends Controller {
   }
 }
 
-const results = document.querySelector("#results")
-const input = document.querySelector(".input-dogs")
+// const results = document.querySelector("#results")
+// const input = document.querySelector(".input-dogs")
 
-fetch("https://dog.ceo/api/breeds/list/all")
-.then((response) => response.json())
-.then((data) => { data.Search.forEach((result) => {
-  const movieTag = `<li class="list-inline-item">
-    <p>${result}</p>
-  </li>`
-  results.insertAdjacentHTML("beforeend", movieTag)
-}
-)
-});
+// fetch("https://dog.ceo/api/breeds/list/all")
+// .then((response) => response.json())
+// .then((data) => { data.Search.forEach((result) => {
+//   const movieTag = `<li class="list-inline-item">
+//     <p>${result}</p>
+//   </li>`
+//   results.insertAdjacentHTML("beforeend", movieTag)
+// }
+// )
+// });
