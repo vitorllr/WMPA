@@ -36,12 +36,15 @@
         <h2 id="kennel-policy">Adoption Policy</h2>
         <p>The shelter is located just in Ipanema rio de janeiro. For more information and to find us, go to our website at https://where-my-pet-at.herokuapp.com/</p>
       </div>
+      <li class="nav-item btn btn-primary my-3" id="pet-btn">
+        <%= link_to "Create a Pet", new_kennel_pet_path(@kennel), class: "nav-link" %>
+      </li>
     </div>
   </div>
   <div class="card-section">
     <div class="row">
       <div class="col-xs-12">
-        <div class="container mt-4">
+        <div class="container my-4">
           <h2>Dogs available on our kennel</h2>
         </div>
       </div>
