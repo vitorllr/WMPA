@@ -37,19 +37,19 @@
         <p>The shelter is located just in Ipanema rio de janeiro. For more information and to find us, go to our website at https://where-my-pet-at.herokuapp.com/</p>
       </div>
       <div class="nav-item btn btn-primary my-3" id="pet-btn">
-        <%= link_to "Create a Pet", new_kennel_pet_path(@kennel), class: "nav-link" %>
+        <%= link_to "Create a Pet", new_kennel_pet_path(current_user.kennels.first), class: "nav-link" %>
       </div>
     </div>
   </div>
   <div class="card-section">
     <div class="row">
       <div class="col-xs-12">
-        <div class="container mt-4 mb-4">
+        <div class="container mt-4 mb-2">
           <h2>Dogs available on our kennel</h2>
         </div>
       </div>
     </div>
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4 ">
       <div class="d-flex justify-content-between flex-wrap">
         <%@pets.each do |pet|  %>
           <div class="m-3">
