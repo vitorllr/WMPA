@@ -40,7 +40,7 @@ class KennelsController < ApplicationController
   private
 
   def kennel_params
-    params.require(:kennel).permit(:name, :address, :phone_number, :email, :photos)
+    params.require(:kennel).permit(:name, :address, :phone_number, :email, photos: [])
   end
 
 end
