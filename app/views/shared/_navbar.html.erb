@@ -39,9 +39,11 @@
           <li class="nav-item">
             <%= link_to "Create a Kennel", new_kennel_path, class: "nav-link" %>
           </li>
-          <div class="nav-item" id="pet-btn">
-            <%= link_to "Create a Pet", new_kennel_pet_path(current_user.kennels.first), class: "nav-link" %>
-          </div>
+          <% if current_user.kennels != [] %>
+            <div class="nav-item" id="pet-btn">
+              <%= link_to "Create a Pet", new_kennel_pet_path(current_user.kennels.first), class: "nav-link" %>
+            </div>
+          <% end %>
           <li class="nav-item dropdown">
             <%= image_tag "https://img.freepik.com/vetores-premium/icone-de-circulo-de-usuario-anonimo-estilo-simples-de-ilustracao-vetorial-com-sombra-longa_520826-1931.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
