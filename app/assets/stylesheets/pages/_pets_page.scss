@@ -125,15 +125,13 @@ body {
   text-overflow: ellipsis;
 }
 
-.margin-esquerda {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .cards {
+  margin: auto auto;
+  padding: 40px;
   display: flex;
-  margin-top: 6em;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width:1100px) {

@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :kennels
+
+  validates :name, :phone_number, presence: true
 end

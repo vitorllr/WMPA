@@ -5,6 +5,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
+
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -12,6 +13,27 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
     })
+    this.#addMarkersToMap()
+    this.#fitMapToMarkers()
+  }
+
+  #addMarkersToMap() {
+    this.markersValue.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
+      const customMarker = document.createElement("div")
+      customMarker.innerHTML = marker.marker_html
+
+      new mapboxgl.Marker()
+        .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
+        .addTo(this.map)
+    })
+  }
+
+  #fitMapToMarkers() {
+    const bounds = new mapboxgl.LngLatBounds()
+    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
   pesquisa() {
@@ -28,17 +50,3 @@ export default class extends Controller {
     })});
   }
 }
-
-// const results = document.querySelector("#results")
-// const input = document.querySelector(".input-dogs")
-
-// fetch("https://dog.ceo/api/breeds/list/all")
-// .then((response) => response.json())
-// .then((data) => { data.Search.forEach((result) => {
-//   const movieTag = `<li class="list-inline-item">
-//     <p>${result}</p>
-//   </li>`
-//   results.insertAdjacentHTML("beforeend", movieTag)
-// }
-// )
-// });
