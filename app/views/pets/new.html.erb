@@ -1,18 +1,18 @@
 <div class="todos">
-
   <div class="form-inputs text-center ml-5 pl-5 mt-5 pt-1 mb-5" id="signup-form">
-
     <h2>Create your pet</h2>
     <%= simple_form_for [@kennel, @pet] do |f| %>
       <%= f.input :name %>
-      <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Senior' => 'Senior'} %>
+      <%= f.input :health %>
+      <%= f.input :age, :collection => { 'Puppy' => 'Puppy', 'Young' => 'Young', 'Adult' => 'Adult', 'Senior' => 'Senior'} %>
+      <%= f.input :coat, :collection => { 'Short' => 'Short', 'Long' => 'Long', 'Hairless' => 'Hairless', 'Combination' => 'Combination'} %>
       <%= f.input :breed %>
       <%= f.input :gender, :collection => {"Male" => "Male", "Female" => "Female"} %>
-      <%= f.input :tipo, :collection => {'Adoption' => 'Adoption', 'Sale' => 'Sale'}%>
+      <%= f.input :tipo, :collection => {'Adoption' => 'Adoption', 'Sale' => 'Sale'}, label: "Type" %>
       <%= f.input :size, :collection => {"Small" => "Small", "Medium" => "Medium", "Big" => "Big"} %>
       <%= f.input :charac %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit class: "btn btn-primary"%>
+      <%= f.submit %>
     <% end %>
   </div>
 </div>
