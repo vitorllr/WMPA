@@ -337,6 +337,10 @@
   justify-content: center;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .below-banner h1 {
   text-align: center;
   margin: 20px 0;
@@ -345,6 +349,7 @@
 }
 
 .card-product-1 {
+  height: 278.18px;
   max-width: 300px;
 }
 
